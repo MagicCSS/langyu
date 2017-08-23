@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>朗域装饰-联系我们</title>
+	<link rel="stylesheet" href="../styles/common.css">
+	<link rel="stylesheet" href="../styles/contact.css">
+	<link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+	<!-- 引入高德地图 -->
+	<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+	<script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+	<script src="http://webapi.amap.com/maps?v=1.3&key=您申请的key值"></script>
+	<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+	<script src="../scripts/jquery.js"></script>
+	<script src="../scripts/function.js"></script>
+	<script>
+		$(function() {
+			$(".user-info input[type='text']").blur(function() {
+				testUserName();
+			});
+			$(".user-info input[type='password']").blur(function() {
+				testPwd();
+			});
+			$(".user-info input[type='email']").blur(function() {
+				testEmail();
+			});
+		});
+	</script>
+</head>
+<body>
+	<header class="w980">
+		<div class="logo"><a href="#"><img src="../images/logo.png" alt="朗域装饰"></a></div>
+		<div class="tel"><img src="../images/tel.png"></div>
+	</header>
+	<div class="w980 page">
+		<div class="wb">
+			<nav>
+				<ul>
+					<li><a href="index.html">网站首页</a></li>
+					<li><a href="allView.html">全景体验</a></li>
+					<li><a href="case.html">经典案例</a></li>
+					<li><a href="about.html">关于我们</a></li>
+					<li><a href="contact.html">联系我们</a></li>
+				</ul>
+			</nav>
+			<div class="contact-banner">
+				<a href=""><img src="../images/contact-banner.jpg" alt=""></a>
+			</div>
+		</div>
+	</div>
+	<div class="location w980">
+		<a href="index.html">首页</a>－<a href="contact.html">联系我们</a>－当前位置
+	</div>
+	<div class="content w980">
+		<div class="content-left">
+			<div class="contact b15">
+				<div class="wb b15">
+					<div class="contact-title"><img src="../images/contact-title.png" alt=""></div>
+					<ul class="side-nav" id="tab-title">
+						<li><a title="联系我们" href="javascript:void(0)">联系我们</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="tuanzhuang b12">
+				<div class="wb b12">
+					<div class="tuanzhuang-title"><img src="../images/tuanzhuang-title.png"></div>
+					<div class="tuanzhuang-content"><img src="../images/tuanzhuang.jpg"></div>
+				</div>
+			</div>
+			<div class="events b12">
+				<div class="wb b12">
+					<div class="events-title"><img src="../images/events-title.png"></div>
+					<div class="events-content"><img src="../images/events.jpg"></div>
+				</div>
+			</div>
+		</div>
+		<div class="content-right">
+			<div class="map-title b12">
+				<div class="wb b12"><h2>公司位置</h2></div>
+			</div>
+			<div class="map-content b15">
+				<div class="wb b15">
+					<div class="b15" id="container"></div>
+				</div>
+			</div>
+			<div class="contact2-title b12">
+				<div class="wb b12"><h2>联系我们</h2></div>
+			</div>
+			<div class="contact2-content">
+				<form action="" method="get" class="user-info b12">
+					<ul class="wb b12">
+						<li>
+							<label for="userName">姓&emsp;名：</label>
+							<input type="text" id="userName" placeholder="徐辉"><span></span>
+						</li>
+						<li>
+							<label for="pwd">密&emsp;码：</label>
+							<input type="password" id="pwd" placeholder="******"><span>请输入密码！</span>
+						</li>
+						<li>
+							<label for="email">邮&emsp;箱：</label>
+							<input type="email" id="email" placeholder="xuhui@qq.com" name="email"><span>请输入正确的电子邮箱!</span>
+						</li>
+						<li>
+					 		<label for="remark">备&emsp;注：</label>
+							<textarea name="remark" id="remark"></textarea>
+						</li>
+						<li>
+						<label for="agree"></label>
+							<input type="checkbox" id="agree">我同意,已阅读
+							<a href="#"><<上海朗域建筑装饰工程有限公司协议>></a>
+						</li>
+						<li>
+							<input type="submit" value="登录">
+							<input type="reset" value="重置">
+							<a href="#">忘记密码</a>
+						</li>
+					</ul>
+				</form>
+				<div class="info b12">
+					<div class="wb b12">
+						<ul>
+							<li>电&emsp;话：400-821-6862</li>
+							<li>邮&emsp;箱：1339893892@qq.com</li>
+							<li>地&emsp;址：上海市闸北区广中路809号2楼</li>
+							<li><a href=""><img src="../images/wx.jpg"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<footer>
+		<div class="w980">
+			<div class="copyright">
+				<div><a href=""><img src="../images/logo.png" alt=""></a></div>
+				<div class="copyright2">
+					<span>Copyright@2016</span>
+					<a href="">沪ICP备06018196号</a>
+				</div>
+			</div>
+			<div class="subnav">
+				<ul>
+					<h2>全景体验馆</h2>
+					<li><a href="allView.html">全景体验馆</a></li>
+				</ul>
+				<ul>
+					<h2>品案例</h2>
+					<li><a href="case.html">现代简约</a></li>
+					<li><a href="case.html">欧式</a></li>
+					<li><a href="case.html">混搭</a></li>
+					<li><a href="case.html">新古典</a></li>
+				</ul>
+				<ul>
+					<h2>关于我们</h2>
+					<li><a href="about.html">公司介绍</a></li>
+					<li><a href="about.html">最新活动</a></li>
+					<li><a href="about.html">团装小区</a></li>
+				</ul>
+				<ul>
+					<h2>联系我们</h2>
+					<li><a href="contact.html">联系我们</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript">
+		  var map = new AMap.Map('container', {
+		      resizeEnable: true,
+		      zoom:11,
+		      center: [121.45 ,31.25]
+		  });
+		  var marker = new AMap.Marker({
+		      position: [121.45 ,31.25],
+		      map:map
+		  });
+		  AMap.plugin('AMap.AdvancedInfoWindow',function(){
+		  	var infowindow = new AMap.AdvancedInfoWindow({
+			    content: '<h3 class="title">高德地图</h3>'+
+			             '<div class="map-local">上海朗域建筑装饰工程有限公司</div>',
+			    offset: new AMap.Pixel(0, -25),
+			    asOrigin:true
+		    });
+		    infowindow.open(map,new AMap.LngLat(121.45 ,31.25));
+			})
+			AMap.plugin(['AMap.ToolBar','AMap.Scale'],function(){
+			    var toolBar = new AMap.ToolBar();
+			    var scale = new AMap.Scale();
+			    map.addControl(toolBar);
+			    map.addControl(scale);
+			})
+	</script>
+</body>
+</html>
