@@ -40,16 +40,18 @@ function showIndexCont() {
 	$(window).scroll(function() {
 		// 当滚动条位置大于240时，出现案例区域
 		if($(window).scrollTop() > 240) {
+			// alert($(window).scrollTop());
 			$(".case-content").animate({marginLeft:"0",opacity:"1"},500,"linear");
 		}
 		// 当滚动条位置大于640时，出现全景展示区域
 		if($(window).scrollTop() > 640) {
+			// alert($(window).scrollTop());
 			$(".all-view-content").animate({opacity:"1"},500,"linear");
 			$(".all-view-content-left").animate({marginLeft:"0",opacity:"1"},500,"linear");
 			$(".all-view-content-right").animate({marginRight:"0",opacity:"1"},500,"linear");
 		}
 		// 当滚动条位置大于1240时，出现朗域知道和最新资讯区域
-		if($(window).scrollTop() > 1240) {
+		if($(window).scrollTop() > 900) {
 			$(".content").animate({opacity:"1"},500,"linear");
 			$(".knowledges").animate({marginLeft:"0",opacity:"1"},500,"linear");
 			$(".news").animate({marginRight:"0",opacity:"1"},500,"linear");
